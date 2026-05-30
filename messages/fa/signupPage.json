@@ -1,0 +1,23 @@
+{
+    "signupPage": {
+        "Form": {
+            "title": "ایجاد حساب کاربری",
+            "description": "همین امروز به وال‌مسِیج بپیوندید",
+            "labelInputFirstName": "نام",
+            "labelInputLastName": "فامیلی",
+            "labelInputEmail": "ایمیل",
+            "labelInputPassword": "رمز عبور",
+            "labelInputConfirmPassword": "تأیید رمز عبور",
+            "placeholderInputFirstName": "نام کامل خود را وارد کنید",
+            "placeholderInputEmail": "ایمیل خود را وارد کنید",
+            "placeholderInputPassword": "رمز عبور بسازید",
+            "placeholderInputConfirmPassword": "رمز عبور را تأیید کنید",
+            "submitBtn": "تکمیل اطلاعات حساب",
+            "agree": "با شرایط استفاده و سیاست حفظ حریم خصوصی موافقم",
+            "haveAccount": "قبلاً حساب دارید؟",
+            "login": "ورود",
+            "referralCode": "کد معرف (اختیاری)",
+            "placeholderInputReferralCode": "کد معرف (اختیاری)"
+        }
+    }
+}

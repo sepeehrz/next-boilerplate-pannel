@@ -1,0 +1,12 @@
+{
+    "otpPage": {
+        "Form": {
+            "title": "Verify",
+            "description": "We've sent a 6-digit code to",
+            "enterCode": "Enter verification code",
+            "resend": "Resend In",
+            "verifyBtn": "Verify Code",
+            "backBtn": "Go Back"
+        }
+    }
+}

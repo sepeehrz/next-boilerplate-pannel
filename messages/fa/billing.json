@@ -1,0 +1,54 @@
+{
+    "billing": {
+        "title": "صورتحساب",
+        "description": "مشاهده فاکتورها، پرداخت‌ها و مدیریت جزئیات صورتحساب",
+        "tables": {
+            "invoices": {
+                "title": "فاکتورها",
+                "columns": {
+                    "invoiceNumber": "شماره فاکتور",
+                    "customer": "مشتری",
+                    "amount": "مبلغ",
+                    "status": "وضعیت",
+                    "currency": "واحد پولی",
+                    "date": "تاریخ"
+                },
+                "actions": {
+                    "details": "جزئیات فاکتور"
+                }
+            },
+            "payments": {
+                "title": "پرداخت‌ها",
+                "columns": {
+                    "invoice": "فاکتور",
+                    "subscription": "اشتراک",
+                    "amount": "مبلغ",
+                    "currency": "واحد پولی",
+                    "date": "تاریخ"
+                }
+            },
+            "paymentMethods": {
+                "title": "روش‌های پرداخت",
+                "columns": {
+                    "name": "نام",
+                    "url": "آدرس"
+                }
+            }
+        },
+        "invoiceDetails": {
+            "title": "جزئیات فاکتور",
+            "invoiceNumber": "شماره فاکتور",
+            "customer": "مشتری",
+            "date": "تاریخ",
+            "payment": "روش پرداخت",
+            "empty": "خالی",
+            "productsTitle": "محصولات خریداری شده",
+            "totalAmount": "مبلغ کل"
+        },
+        "tabs": {
+            "invoice": "فاکتورها",
+            "payments": "پرداخت‌ها",
+            "paymentsMethod": "روش‌های پرداخت"
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "signupPage": {
+        "Form": {
+            "title": "Create Account",
+            "description": "Join WallMessage today",
+            "labelInputFirstName": "Firstname",
+            "labelInputLastName": "Lastname",
+            "labelInputEmail": "Email",
+            "labelInputPassword": "Password",
+            "labelInputConfirmPassword": "Confirm Password",
+            "placeholderInputFirstName": "Enter your full name",
+            "placeholderInputEmail": "Enter your email",
+            "placeholderInputPassword": "Create a password",
+            "placeholderInputConfirmPassword": "Confirm your password",
+            "submitBtn": "Complete Profile",
+            "agree": " I agree to the  Terms of Service and Privacy Policy",
+            "haveAccount": "Already have an account?",
+            "login": "Sign in",
+            "referralCode": "Referral Code (optional)",
+            "placeholderInputReferralCode": "Enter referral code (optional)"
+        }
+    }
+}

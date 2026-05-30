@@ -1,0 +1,24 @@
+{
+    "profile": {
+        "title": "Profile",
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "authKey": "Auth key",
+        "information": "Information",
+        "changePassword": {
+            "currentPasswordPlaceholder": "Enter your current password",
+            "newPasswordPlaceholder": "Enter your new password",
+            "confirmNewPasswordPlaceholder": "Confirm your new password",
+            "submit": "Confirm",
+            "loading": "Submitting...",
+            "title": "Change Password"
+        },
+        "validations": {
+            "currentPasswordRequired": "Current password is required",
+            "newPasswordRequired": "New password is required",
+            "confirmNewPasswordRequired": "Confirming the new password is required",
+            "passwordMismatch": "New password and confirmation must match"
+        }
+    }
+}

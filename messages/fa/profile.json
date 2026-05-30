@@ -1,0 +1,24 @@
+{
+    "profile": {
+        "title": "پروفایل",
+        "name": "نام",
+        "email": "ایمیل",
+        "phone": "شماره تماس",
+        "authKey": "کلید هویت",
+        "information": "اطلاعات کاربری",
+        "changePassword": {
+            "currentPasswordPlaceholder": "رمز عبور فعلی خود را وارد کنید",
+            "newPasswordPlaceholder": "رمز عبور جدید خود را وارد کنید",
+            "confirmNewPasswordPlaceholder": "تأیید رمز عبور جدید را وارد کنید",
+            "submit": "تأیید",
+            "loading": "در حال ارسال...",
+            "title": "تغییر رمز عبور"
+        },
+        "validations": {
+            "currentPasswordRequired": "رمز عبور فعلی الزامی است",
+            "newPasswordRequired": "رمز عبور جدید الزامی است",
+            "confirmNewPasswordRequired": "تأیید رمز عبور جدید الزامی است",
+            "passwordMismatch": "رمز عبور جدید و تأیید آن باید یکسان باشند"
+        }
+    }
+}

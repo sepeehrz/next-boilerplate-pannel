@@ -1,0 +1,17 @@
+{
+    "subscriptions": {
+        "title": "Subscriptions",
+        "description": "Manage all yout subscriptions plans and view usage",
+        "removeSubscriptions": "Are you sure you want to delete this subscription?",
+        "table": {
+            "columns": {
+                "code": "Code",
+                "plan": "Plan",
+                "status": "Status",
+                "period": "Period",
+                "usage": "Usage",
+                "payment": "Payment"
+            }
+        }
+    }
+}

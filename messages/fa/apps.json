@@ -1,0 +1,57 @@
+{
+    "apps": {
+        "title": "برنامه‌ها و کلیدهای اپلیکیشن",
+        "description": "مدیریت یکپارچه‌سازی برنامه‌ها و کلیدهای API",
+        "addBtn": "ایجاد برنامه",
+        "removeApps": "آیا مطمئن هستید که می‌خواهید این برنامه را حذف کنید؟",
+        "appCreatedSuccess": "برنامه با موفقیت ایجاد شد.",
+        "table": {
+            "columns": {
+                "name": "نام",
+                "appKey": "کلید برنامه",
+                "createdOn": "تاریخ ایجاد",
+                "status": "وضعیت",
+                "device": "دستگاه"
+            }
+        },
+        "actions": {
+            "viewKeys": "مشاهده کلیدها",
+            "edit": "ویرایش"
+        },
+        "validations": {
+            "nameRequired": "نام برنامه نمی‌تواند خالی باشد.",
+            "deviceRequired": "انتخاب دستگاه الزامی است."
+        },
+        "stats": {
+            "totalApps": "تعداد کل برنامه‌ها",
+            "active": "فعال",
+            "inactive": "غیرفعال"
+        },
+        "addAppsForm": {
+            "formAddTitle": "ایجاد برنامه جدید",
+            "updateForm": "ویرایش",
+            "formAddDescription": "یک برنامه پیام‌رسان جدید ایجاد کرده و یک کلید API تولید کنید",
+            "programNameLabel": "نام برنامه",
+            "programNamePalceholder": "مثلاً: ربات پشتیبانی مشتری",
+            "linkedDeviceLabel": "دستگاه متصل",
+            "linkedDevicePlaceholder": "یک دستگاه انتخاب کنید",
+            "cancelBtn": "لغو",
+            "saveBtn": "ذخیره"
+        },
+        "appKey": {
+            "title": "یکپارچه‌سازی برنامه",
+            "description": "مشاهده مدیریت کدهای برنامه به‌صورت کامل",
+            "programName": "نام برنامه",
+            "botText": "ربات پشتیبانی مشتری",
+            "appKeyText": "کلید برنامه (پیش‌نمایش)",
+            "authKeyText": "کلید اهراز (پیش‌نمایش)",
+            "inputDescription": "برای دسترسی به مدیریت کامل کدها از دکمه «مشاهده همه کدها» استفاده کنید.",
+            "quickInfo": "اطلاعات سریع",
+            "listItemOne": "• ۱۰۰ درخواست در دقیقه",
+            "listItemTwo": "• ۱۰۰۰ پیام در روز",
+            "listItemThree": "• محدودیت لحظه‌ای: ۱۰ درخواست در ثانیه",
+            "closeBtn": "بستن",
+            "viewBtn": "مشاهده همه کدها"
+        }
+    }
+}

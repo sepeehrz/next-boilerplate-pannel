@@ -1,0 +1,57 @@
+{
+    "apps": {
+        "title": "Programs & App Keys",
+        "description": "Manage your application integrations and API keys",
+        "addBtn": "Create App",
+        "removeApps": "Are you sure you want to delete this app?",
+        "appCreatedSuccess": "The app was successfully created.",
+        "table": {
+            "columns": {
+                "name": "Name",
+                "appKey": "App Key",
+                "status": "Status",
+                "device": "Device",
+                "createdOn": "Created On"
+            }
+        },
+        "actions": {
+            "viewKeys": "View Keys",
+            "edit": "Edit"
+        },
+        "validations": {
+            "nameRequired": "Application name cannot be empty.",
+            "deviceRequired": "Device selection is required."
+        },
+        "stats": {
+            "totalApps": "Total Apps",
+            "active": "Active",
+            "inactive": "Inactive"
+        },
+        "addAppsForm": {
+            "formAddTitle": "Create New Program",
+            "updateForm": "Update",
+            "formAddDescription": "Create a new messaging program and generate an API key",
+            "programNameLabel": "Program Name",
+            "programNamePalceholder": "e.g., Customer Support Bot",
+            "linkedDeviceLabel": "Linked Device",
+            "linkedDevicePlaceholder": "Select a Device",
+            "cancelBtn": "Cancel",
+            "saveBtn": "Save"
+        },
+        "appKey": {
+            "title": "Program Integration",
+            "description": "View detailed app code management",
+            "programName": "Program Name",
+            "botText": "Customer Support Bot",
+            "appKeyText": "App Key (Preview)",
+            "authKeyText": "Auth Key (Preview)",
+            "inputDescription": "Use the `View All Codes` button to access full code management features.",
+            "quickInfo": "Quick Info",
+            "listItemOne": "• 100 requests per minute",
+            "listItemTwo": "• 1000 messages per day",
+            "listItemThree": "• Burst limit: 10 requests per second",
+            "closeBtn": "Close",
+            "viewBtn": "View All Codes"
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "forgotPassowrd": {
+        "Form": {
+            "title": "فراموشی رمز عبور",
+            "description": "برای بازیابی رمز عبور، ایمیل یا شماره موبایل خود را وارد کنید",
+            "tabEmail": "ایمیل",
+            "tabMobile": "موبایل",
+            "verifyBtn": "ارسال کد بازیابی",
+            "backBtn": "بازگشت به ورود",
+            "emailInputTitle": "آدرس ایمیل",
+            "emailInputPlaceholder": "ایمیل خود را وارد کنید",
+            "mobileInputTitle": "شماره موبایل",
+            "mobileInputPlaceholder": "شماره موبایل خود را وارد کنید"
+        }
+    }
+}

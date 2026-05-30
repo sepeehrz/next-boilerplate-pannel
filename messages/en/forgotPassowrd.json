@@ -1,0 +1,16 @@
+{
+    "forgotPassowrd": {
+        "Form": {
+            "title": "Forgot Password",
+            "description": "Enter your email or phone number to reset your password",
+            "tabEmail": "email",
+            "tabMobile": "mobile",
+            "verifyBtn": "Send Reset Code",
+            "backBtn": "Back to Sign In",
+            "emailInputTitle": "Email Address",
+            "emailInputPlaceholder": "Enter your email address",
+            "mobileInputTitle": "Phone Number",
+            "mobileInputPlaceholder": "Enter your phone number"
+        }
+    }
+}

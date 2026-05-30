@@ -1,0 +1,23 @@
+{
+    "sideBar": {
+        "title": "WallMessage",
+        "description": " WhatsApp messaging platform",
+        "menu": {
+            "dashboard": "Dashborad",
+            "devices": "Devices",
+            "webhooks": "Webhooks",
+            "apps": "Apps",
+            "singleSend": "Single Send",
+            "contacts": "Contacts",
+            "groups": "Groups",
+            "templates": "Templates",
+            "chatbot": "Chatbots",
+            "billing": "Billing",
+            "wallet": "Wallet",
+            "store": "Store",
+            "subscriptions": "Subscriptions",
+            "referral": "Referral",
+            "campaigns": "Bulk Send"
+        }
+    }
+}

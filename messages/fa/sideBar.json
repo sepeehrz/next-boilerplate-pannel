@@ -1,0 +1,23 @@
+{
+    "sideBar": {
+        "title": "WallMessage",
+        "description": "پلتفرم پیام‌رسانی واتساپ",
+        "menu": {
+            "dashboard": "داشبورد",
+            "devices": "دستگاه‌ها",
+            "webhooks": "وب هوک‌ها",
+            "apps": "برنامه‌ها",
+            "singleSend": "ارسال تکی",
+            "contacts": "مخاطبین",
+            "groups": "'گروه‌ها'",
+            "templates": "قالب‌ها",
+            "chatbot": "چت‌بات‌ها",
+            "wallet": "کیف پول",
+            "store": "فروشگاه",
+            "billing": "صورتحساب",
+            "subscriptions": "اشتراک‌ها",
+            "referral": "دعوت",
+            "campaigns": "ارسال گروهی"
+        }
+    }
+}

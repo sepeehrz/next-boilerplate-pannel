@@ -1,0 +1,5 @@
+{
+  "themeColor": "blue",
+  "showBanner": true,
+  "apiBaseUrl": "https://api.example.com"
+}

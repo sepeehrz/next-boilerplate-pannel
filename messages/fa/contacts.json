@@ -1,0 +1,68 @@
+{
+    "contacts": {
+        "title": "مخاطبین",
+        "description": "مدیریت لیست مخاطبین و گروه‌ها",
+        "addBtn": "افزودن مخاطب",
+        "removeContact": "آیا مطمئن هستید که می‌خواهید این مخاطب را حذف کنید؟",
+        "ContactCreatedSuccess": "مخاطب با موفقیت ایجاد شد.",
+        "ContactGroupCreatedSuccess": "گروه با موفقیت ایجاد شد.",
+        "table": {
+            "columns": {
+                "name": "نام",
+                "phone": "شماره تلفن",
+                "email": "ایمیل",
+                "gender": "جنسیت",
+                "group": "گروه",
+                "birth_date": "تاریخ تولد"
+            },
+            "headerActions": {
+                "import": "بارگزاری گروهی",
+                "createContact": "ساخت گروه"
+            }
+        },
+        "stats": {
+            "totalContacts": "تعداد کل مخاطبین",
+            "customers": "مشتریان",
+            "prospects": "مشتریان بالقوه",
+            "vipClient": "مشتری ویژه"
+        },
+        "form": {
+            "title": "ایجاد مخاطب جدید",
+            "firstNameLabel": "نام",
+            "firstNamePlaceholder": "نام را وارد کنید",
+            "lastNameLabel": "نام خانوادگی",
+            "lastNamePlaceholder": "نام خانوادگی را وارد کنید",
+            "genderLabel": "جنسیت",
+            "genderPlaceholder": "جنسیت خود را انتخاب کنید",
+            "birthDateLabel": "تاریخ تولد",
+            "birthDatePlaceholder": "تاریخ تولد را انتخاب کنید",
+            "countryCodeLabel": "کد کشور",
+            "countryCodePlaceholder": "کد کشور را انتخاب کنید",
+            "phoneNumberLabel": "شماره تلفن",
+            "phoneNumberPlaceholder": "شماره تلفن خود را وارد کنید",
+            "emailLabel": "ایمیل",
+            "emailPlaceholder": "ایمیل خود را وارد کنید",
+            "descriptionLabel": "توضیحات",
+            "descriptionPlaceholder": "توضیحات را وارد کنید",
+            "cancelBtn": "لغو",
+            "saveBtn": "ایجاد مخاطب",
+            "updateBtn": "به‌روزرسانی مخاطب"
+        },
+        "addGroup": {
+            "title": "ایجاد گروه جدید",
+            "groupLabel": "گروه",
+            "groupPlaceholder": "گروه خود را انتخاب کنید",
+            "contactLabel": "مخاطب",
+            "contactPlaceholder": "مخاطب مورد نظر را انتخاب کنید",
+            "saveBtn": "ایجاد گروه",
+            "cancelBtn": "لغو"
+        },
+        "validations": {
+            "firstNameRequired": "نام نمی‌تواند خالی باشد.",
+            "emailValidation": "ایمیل معتبر نیست.",
+            "countryCodeRequired": "کد کشور نمی‌تواند خالی باشد.",
+            "mobileRequired": "موبایل نمی‌تواند خالی باشد.",
+            "mobileFormatInvalid": "فرمت موبایل اشتباه است "
+        }
+    }
+}

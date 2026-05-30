@@ -1,0 +1,10 @@
+{
+    "dataGrid": {
+        "edit": "Edit",
+        "delete": "Delete",
+        "actions": "Actions",
+        "noResult": "no result",
+        "prev": "Previous",
+        "next": "Next"
+    }
+}

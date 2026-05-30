@@ -1,0 +1,54 @@
+{
+    "billing": {
+        "title": "billing",
+        "description": "View invoices,payments and manage billing details",
+        "tables": {
+            "invoices": {
+                "title": "Invoices",
+                "columns": {
+                    "invoiceNumber": "Invoice Number",
+                    "customer": "Customer",
+                    "amount": "Amount",
+                    "currency": "Currency",
+                    "status": "Status",
+                    "date": "Date"
+                },
+                "actions": {
+                    "details": "Invoice Details"
+                }
+            },
+            "payments": {
+                "title": "Payments",
+                "columns": {
+                    "invoice": "Invoice",
+                    "subscription": "Subscription",
+                    "amount": "Amount",
+                    "currency": "Currency",
+                    "date": "Date"
+                }
+            },
+            "paymentMethods": {
+                "title": "Payment Methods",
+                "columns": {
+                    "name": "Name",
+                    "url": "Url"
+                }
+            }
+        },
+        "invoiceDetails": {
+            "title": "invoice details",
+            "invoiceNumber": "Invoice Number",
+            "customer": "Customer",
+            "date": "Date",
+            "payment": "Payment Method",
+            "empty": "Empty",
+            "productsTitle": "Purchased Products",
+            "totalAmount": "Total Amount"
+        },
+        "tabs": {
+            "invoice": "Invoices",
+            "payments": "Payments",
+            "paymentsMethod": "Payment Methods"
+        }
+    }
+}
