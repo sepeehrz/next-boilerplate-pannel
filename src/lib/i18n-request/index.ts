@@ -1,7 +1,7 @@
 import {cookies} from 'next/headers';
 import {defaultLocale} from '@/lib/i18n';
+import {getMessages} from './getMessageI18n';
 import {getRequestConfig} from 'next-intl/server';
-import {getMessages} from '@/utils/getMessageI18n';
 
 export default getRequestConfig(async () => {
   const cookieStore = await cookies();

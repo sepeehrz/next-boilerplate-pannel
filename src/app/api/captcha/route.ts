@@ -1,15 +1,13 @@
+import {env} from '@/config';
 import {NextResponse} from 'next/server';
 
 export async function POST() {
-  const response = await fetch(
-    process.env.NEXT_PUBLIC_API + '/User/GenerateCaptcha',
-    {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      }
+  const response = await fetch(env.apiUrl + '/User/GenerateCaptcha', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
     }
-  );
+  });
 
   if (!response.ok) {
     return Response.json(

@@ -14,7 +14,7 @@ const namespaces = [
 export async function getMessages(locale: Locale) {
   const parts = await Promise.all(
     namespaces.map(ns =>
-      import(`../../messages/${locale}/${ns}.json`).then(m => m.default)
+      import(`../../../messages/${locale}/${ns}.json`).then(m => m.default)
     )
   );
 

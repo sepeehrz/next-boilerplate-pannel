@@ -1,29 +1,27 @@
 import '../globals.css';
 import {cn} from '@/lib';
-import {getConfig} from '@/utils';
-import type {Metadata} from 'next';
+import {Metadata} from 'next';
 import {Shabnam} from '@/lib/fonts';
 import Providers from '@/providers/index';
 import {Toaster} from '@/components/ui/sonner';
-import {getLocaleFromCookie} from '@/utils/locale';
-import {getMessages} from '@/utils/getMessageI18n';
+import {getTranslations} from 'next-intl/server';
 import {AppSidebar} from '@/components/app-sidebar';
-import {AppHeader} from '@/components/app-header/index';
 import {SidebarProvider} from '@/components/ui/sidebar';
+import {AppHeader} from '@/components/app-header/index';
+import {getLocaleFromCookie} from '@/lib/i18n-request/locale';
+import {getMessages} from '@/lib/i18n-request/getMessageI18n';
 
 export async function generateMetadata(): Promise<Metadata> {
-  const locale = await getLocaleFromCookie();
-  const config = await getConfig(locale);
+  const translate = await getTranslations('global');
 
   return {
-    title: config.title,
+    title: translate('title'),
     icons: {
-      icon: config.favIcon,
-      shortcut: config.favIcon
+      icon: '../../../public/favicon.webp',
+      shortcut: '../../../public/favicon.webp'
     }
   };
 }
-
 export default async function RootLayout({
   children
 }: Readonly<{

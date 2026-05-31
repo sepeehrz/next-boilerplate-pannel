@@ -1,3 +1,2 @@
 export * from './filters';
-export {getMessages} from './getMessageI18n';
-export {getConfig} from './config';
+export {getMessages} from '../lib/i18n-request/getMessageI18n';
