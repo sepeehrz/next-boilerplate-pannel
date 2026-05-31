@@ -2,20 +2,20 @@
 
 import {Button} from '../ui/button';
 import {useTranslations} from 'next-intl';
+import {useRouter} from 'next/navigation';
 import {LogoutComponent} from '../logout';
 import {ChangeTheme} from '../change-theme';
+import {Bell, User, User2} from 'lucide-react';
 import {useDirection} from '@/hooks/useDirection';
-import {User, Bell, User2} from 'lucide-react';
 import {LanguageSwitcher} from '../common/switchLang';
 import {SidebarTrigger} from '@/components/ui/sidebar';
 import {Tooltip, TooltipContent, TooltipTrigger} from '@/components/ui/tooltip';
 import {
   DropdownMenu,
-  DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuContent,
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu';
-import {useRouter} from 'next/navigation';
 
 export function AppHeader() {
   const translate = useTranslations('global');

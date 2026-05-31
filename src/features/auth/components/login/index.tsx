@@ -1,6 +1,6 @@
 import {FormComponent} from './form';
-import {LanguageSwitcher} from '../switchLang';
 import {useTranslations} from 'next-intl';
+import {LanguageSwitcher} from '../switchLang';
 
 export function LoginComponent() {
   const translate = useTranslations('loginPage');

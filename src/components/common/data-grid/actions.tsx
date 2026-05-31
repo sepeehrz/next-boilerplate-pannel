@@ -3,13 +3,13 @@ import {useTranslations} from 'next-intl';
 import {Button} from '@/components/ui/button';
 import {useDirection} from '@/hooks/useDirection';
 import {Edit, Trash2, EllipsisVertical} from 'lucide-react';
+import {Tooltip, TooltipContent, TooltipTrigger} from '@/components/ui/tooltip';
 import {
   DropdownMenu,
-  DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuContent,
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu';
-import {Tooltip, TooltipContent, TooltipTrigger} from '@/components/ui/tooltip';
 
 export interface IMoreActions<T> {
   title: string;

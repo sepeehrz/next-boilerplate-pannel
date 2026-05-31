@@ -2,24 +2,23 @@
 import type {mode} from './index';
 import {useForm} from 'react-hook-form';
 import {useTranslations} from 'next-intl';
+import {Channel} from '../../../../enums';
 import {Input} from '@/components/ui/input';
 import {Button} from '@/components/ui/button';
-import {Channel} from '../../../../enums';
 import {zodResolver} from '@hookform/resolvers/zod';
+import {CaptchaFieldComponent} from '../../captcha';
 import {useCheckUser} from '@/features/auth/hooks/checkUser';
+import type {LoginWithOtpRequestDTO} from '@/features/auth/types';
 import {loginOtpEmailSchema} from '@/features/auth/validations/loginOtpEmailSchema';
 import type {loginOtpEmailValues} from '@/features/auth/validations/loginOtpEmailSchema';
-
 import {
   Form,
-  FormControl,
-  FormField,
   FormItem,
+  FormField,
   FormLabel,
+  FormControl,
   FormMessage
 } from '@/components/ui/form';
-import {CaptchaFieldComponent} from '../../captcha';
-import type {LoginWithOtpRequestDTO} from '@/features/auth/types';
 
 interface IProps {
   changeMode: (value: mode) => void;

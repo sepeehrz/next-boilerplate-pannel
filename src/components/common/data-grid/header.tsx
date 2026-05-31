@@ -1,6 +1,7 @@
-import {Button} from '@/components/ui/button';
-import {ReactNode} from 'react';
 import {cn} from '@/lib';
+import {ReactNode} from 'react';
+import {Button} from '@/components/ui/button';
+
 interface IProps {
   title?: string;
   description?: string;

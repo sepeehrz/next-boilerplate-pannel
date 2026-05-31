@@ -1,7 +1,6 @@
 import 'server-only';
-
-import {cookies} from 'next/headers';
 import {defaultLocale} from '@/lib';
+import {cookies} from 'next/headers';
 
 export const SUPPORTED_LOCALES = ['fa', 'en'] as const;
 export type Locale = (typeof SUPPORTED_LOCALES)[number];

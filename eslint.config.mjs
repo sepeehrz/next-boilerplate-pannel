@@ -1,8 +1,9 @@
+import prettier from 'eslint-config-prettier';
+import nextTs from 'eslint-config-next/typescript';
+import perfectionist from 'eslint-plugin-perfectionist';
+import unusedImports from 'eslint-plugin-unused-imports';
 import {defineConfig, globalIgnores} from 'eslint/config';
 import nextVitals from 'eslint-config-next/core-web-vitals';
-import nextTs from 'eslint-config-next/typescript';
-import prettier from 'eslint-config-prettier';
-import unusedImports from 'eslint-plugin-unused-imports';
 
 export default defineConfig([
   ...nextVitals,
@@ -10,7 +11,8 @@ export default defineConfig([
   prettier,
   {
     plugins: {
-      'unused-imports': unusedImports
+      'unused-imports': unusedImports,
+      perfectionist
     },
     rules: {
       'no-console': ['warn', {allow: ['warn', 'error']}],
@@ -19,6 +21,7 @@ export default defineConfig([
 
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': 'off',
+
       'unused-imports/no-unused-imports': 'error',
       'unused-imports/no-unused-vars': [
         'warn',
@@ -27,6 +30,25 @@ export default defineConfig([
           varsIgnorePattern: '^_',
           args: 'after-used',
           argsIgnorePattern: '^_'
+        }
+      ],
+
+      'perfectionist/sort-imports': [
+        'error',
+        {
+          type: 'line-length',
+          order: 'asc',
+          newlinesBetween: 0,
+
+          groups: [['type-import', 'value-import']]
+        }
+      ],
+
+      'perfectionist/sort-named-imports': [
+        'error',
+        {
+          type: 'line-length',
+          order: 'asc'
         }
       ]
     }

@@ -1,7 +1,7 @@
 'use server';
 
-import fs from 'fs/promises';
 import path from 'path';
+import fs from 'fs/promises';
 
 export async function getConfig(locale: 'fa' | 'en') {
   const filePath = path.join(

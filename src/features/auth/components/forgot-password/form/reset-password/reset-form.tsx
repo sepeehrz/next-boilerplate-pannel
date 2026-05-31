@@ -1,25 +1,24 @@
 'use client';
 
-import {useEffect, useRef, useState} from 'react';
 import {useForm} from 'react-hook-form';
-import {zodResolver} from '@hookform/resolvers/zod';
 import {useRouter} from 'next/navigation';
-import {Button} from '@/components/ui/button';
+import {useTranslations} from 'next-intl';
 import {Input} from '@/components/ui/input';
+import {Button} from '@/components/ui/button';
+import {useRef, useState, useEffect} from 'react';
+import {zodResolver} from '@hookform/resolvers/zod';
 import {
   Form,
-  FormControl,
+  FormItem,
   FormField,
   FormLabel,
-  FormItem,
+  FormControl,
   FormMessage
 } from '@/components/ui/form';
-
 import {
   ResetPasswordSchema,
   type ResetPasswordFormValues
 } from '../../../../validations/resetPasswordShcema';
-import {useTranslations} from 'next-intl';
 
 export function ResetFormComponent() {
   const translate = useTranslations('resetPassword.Form');

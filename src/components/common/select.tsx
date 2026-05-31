@@ -1,23 +1,21 @@
 'use client';
 
-import * as React from 'react';
-import {Check, ChevronsUpDown} from 'lucide-react';
-import {useTranslations} from 'next-intl';
-
 import {cn} from '@/lib';
-import {useDirection} from '@/hooks/useDirection';
-
+import * as React from 'react';
+import {useTranslations} from 'next-intl';
 import {Badge} from '@/components/ui/badge';
 import {Button} from '@/components/ui/button';
+import {useDirection} from '@/hooks/useDirection';
+import {Check, ChevronsUpDown} from 'lucide-react';
+import {Popover, PopoverContent, PopoverTrigger} from '@/components/ui/popover';
 import {
   Command,
+  CommandItem,
+  CommandList,
   CommandEmpty,
   CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList
+  CommandInput
 } from '@/components/ui/command';
-import {Popover, PopoverContent, PopoverTrigger} from '@/components/ui/popover';
 
 interface SelectOption {
   value: string;

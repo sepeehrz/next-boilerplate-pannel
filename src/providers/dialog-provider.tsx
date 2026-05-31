@@ -1,13 +1,13 @@
 'use client';
 
-import {createContext, useState, ReactNode, ComponentType} from 'react';
+import {VisuallyHidden} from '@radix-ui/react-visually-hidden';
+import {useState, ReactNode, createContext, ComponentType} from 'react';
 import {
   Dialog,
-  DialogContent,
   DialogTitle,
+  DialogContent,
   DialogDescription
 } from '@/components/ui/dialog';
-import {VisuallyHidden} from '@radix-ui/react-visually-hidden';
 
 type DialogComponentProps = {
   closeDialog: () => void;

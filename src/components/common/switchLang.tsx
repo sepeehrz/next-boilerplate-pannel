@@ -1,16 +1,16 @@
 'use client';
 
-import {Button} from '@/components/ui/button';
 import {Globe} from 'lucide-react';
-import {
-  DropdownMenu,
-  DropdownMenuTrigger,
-  DropdownMenuContent,
-  DropdownMenuItem
-} from '@/components/ui/dropdown-menu';
+import {useTranslations} from 'next-intl';
+import {Button} from '@/components/ui/button';
 import {useChangeLanguage} from '@/hooks/use-change-language';
 import {Tooltip, TooltipContent, TooltipTrigger} from '@/components/ui/tooltip';
-import {useTranslations} from 'next-intl';
+import {
+  DropdownMenu,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+  DropdownMenuContent
+} from '@/components/ui/dropdown-menu';
 
 export function LanguageSwitcher() {
   const {locale, changeLanguage} = useChangeLanguage();

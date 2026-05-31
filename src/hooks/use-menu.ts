@@ -1,20 +1,20 @@
 import {useTranslations} from 'next-intl';
 import {
-  ChartColumn,
-  Smartphone,
-  Webhook,
-  CodeXml,
+  Bot,
   Send,
   Users,
-  LayoutTemplate,
-  CreditCard,
-  Bot,
-  Wallet,
   Store,
-  UserPlus,
+  Boxes,
+  Wallet,
+  Webhook,
+  CodeXml,
   Receipt,
+  UserPlus,
   Megaphone,
-  Boxes
+  Smartphone,
+  CreditCard,
+  ChartColumn,
+  LayoutTemplate
 } from 'lucide-react';
 
 export function useMenu() {

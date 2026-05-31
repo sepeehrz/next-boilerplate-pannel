@@ -1,12 +1,11 @@
 'use client';
 import {useTranslations} from 'next-intl';
 import {LoginWithOtpComponent} from './otp';
-
 import {
   Card,
-  CardDescription,
+  CardTitle,
   CardHeader,
-  CardTitle
+  CardDescription
 } from '@/components/ui/card';
 
 export type ILoginMode = 'password' | 'otp';

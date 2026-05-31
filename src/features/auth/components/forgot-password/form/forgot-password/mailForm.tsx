@@ -1,3 +1,4 @@
+import type {IMode} from '../..';
 import {useForm} from 'react-hook-form';
 import {useTranslations} from 'next-intl';
 import {Input} from '@/components/ui/input';
@@ -8,13 +9,12 @@ import {createForgotPasswordMailSchema} from '../../../../validations/forgotPass
 import type {ForgotPasswordMailFormValues} from '../../../../validations/forgotPasswordShcema';
 import {
   Form,
-  FormControl,
-  FormField,
   FormItem,
+  FormField,
   FormLabel,
+  FormControl,
   FormMessage
 } from '@/components/ui/form';
-import type {IMode} from '../..';
 
 interface IProps {
   changeMode: (value: IMode) => void;

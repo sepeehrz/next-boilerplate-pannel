@@ -1,19 +1,17 @@
 'use client';
 
-import * as React from 'react';
-import {Check, ChevronsUpDown} from 'lucide-react';
-
 import {cn} from '@/lib';
+import * as React from 'react';
 import {Button} from '@/components/ui/button';
+import {Check, ChevronsUpDown} from 'lucide-react';
+import {Popover, PopoverContent, PopoverTrigger} from '@/components/ui/popover';
 import {
   Command,
-  CommandEmpty,
-  CommandInput,
   CommandItem,
-  CommandList
+  CommandList,
+  CommandEmpty,
+  CommandInput
 } from '@/components/ui/command';
-
-import {Popover, PopoverContent, PopoverTrigger} from '@/components/ui/popover';
 
 export type Option = {
   label: string;

@@ -1,14 +1,14 @@
 'use client';
 
-import {useChangeLanguage} from '@/hooks/use-change-language';
 import {Button} from '@/components/ui/button';
+import {useDirection} from '@/hooks/useDirection';
+import {useChangeLanguage} from '@/hooks/use-change-language';
 import {
   DropdownMenu,
+  DropdownMenuItem,
   DropdownMenuTrigger,
-  DropdownMenuContent,
-  DropdownMenuItem
+  DropdownMenuContent
 } from '@/components/ui/dropdown-menu';
-import {useDirection} from '@/hooks/useDirection';
 
 export function LanguageSwitcher() {
   const {locale, changeLanguage} = useChangeLanguage();

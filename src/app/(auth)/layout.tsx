@@ -2,9 +2,9 @@ import {cn} from '@/lib';
 import '../globals.css';
 import {getConfig} from '@/utils';
 import type {Metadata} from 'next';
+import {Shabnam} from '@/lib/fonts';
 import Providers from '@/providers/index';
 import {Toaster} from '@/components/ui/sonner';
-import {Shabnam} from '@/lib/fonts';
 import {getLocaleFromCookie} from '@/utils/locale';
 import {getMessages} from '@/utils/getMessageI18n';
 

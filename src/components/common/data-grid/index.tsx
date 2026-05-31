@@ -1,34 +1,33 @@
 'use client';
 
 import {DataGridHeader} from './header';
-import React, {useState, ReactNode, useMemo, useEffect} from 'react';
 import {useTranslations} from 'next-intl';
 import {DataGridFilters} from './filters';
 import {DataGridActions} from './actions';
 import {DataGridPagination} from './pagination';
-import type {IMoreActions, IFlatActions} from './actions';
-
+import {Checkbox} from '@/components/ui/checkbox';
 import {RowSelectionState} from '@tanstack/react-table';
-import {
-  ColumnDef,
-  SortingState,
-  flexRender,
-  getCoreRowModel,
-  getPaginationRowModel,
-  getFilteredRowModel,
-  useReactTable,
-  getSortedRowModel,
-  ColumnFiltersState
-} from '@tanstack/react-table';
+import type {IMoreActions, IFlatActions} from './actions';
+import {useMemo, useState, ReactNode, useEffect} from 'react';
 import {
   Table,
+  TableRow,
   TableBody,
   TableCell,
   TableHead,
-  TableHeader,
-  TableRow
+  TableHeader
 } from '@/components/ui/table';
-import {Checkbox} from '@/components/ui/checkbox';
+import {
+  ColumnDef,
+  flexRender,
+  SortingState,
+  useReactTable,
+  getCoreRowModel,
+  getSortedRowModel,
+  ColumnFiltersState,
+  getFilteredRowModel,
+  getPaginationRowModel
+} from '@tanstack/react-table';
 
 type PaginationMode = 'server' | 'client';
 

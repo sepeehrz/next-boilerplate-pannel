@@ -1,17 +1,17 @@
 'use client';
 
 import type {IMode} from '../..';
-import {useTranslations} from 'next-intl';
 import {ArrowLeft} from 'lucide-react';
+import {useTranslations} from 'next-intl';
+import {useRouter} from 'next/navigation';
+import {Button} from '@/components/ui/button';
+import {ResetFormComponent} from './reset-form';
 import {
   Card,
-  CardDescription,
+  CardTitle,
   CardHeader,
-  CardTitle
+  CardDescription
 } from '@/components/ui/card';
-import {Button} from '@/components/ui/button';
-import {useRouter} from 'next/navigation';
-import {ResetFormComponent} from './reset-form';
 
 interface IProps {
   changeMode: (value: IMode) => void;

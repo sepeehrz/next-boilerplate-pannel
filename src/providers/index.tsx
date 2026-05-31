@@ -1,7 +1,7 @@
 'use client';
 
 import dynamic from 'next/dynamic';
-import {ReactNode, useState} from 'react';
+import {useState, ReactNode} from 'react';
 import {NextIntlClientProvider} from 'next-intl';
 import {DialogProvider} from './dialog-provider';
 import {ConfirmDialogProvider} from './alert-dialog-provider';

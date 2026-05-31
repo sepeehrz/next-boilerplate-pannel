@@ -8,10 +8,10 @@ import {createForgotPasswordMobileSchema} from '../../../../validations/forgotPa
 import type {ForgotPasswordMobileFormValues} from '../../../../validations/forgotPasswordShcema';
 import {
   Form,
-  FormControl,
-  FormField,
   FormItem,
+  FormField,
   FormLabel,
+  FormControl,
   FormMessage
 } from '@/components/ui/form';
 

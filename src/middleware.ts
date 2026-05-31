@@ -1,7 +1,7 @@
-import {routeProtection} from './middlewares/route-protection';
-import type {NextRequest} from 'next/server';
 import {NextResponse} from 'next/server';
+import type {NextRequest} from 'next/server';
 import {setLocaleCookie} from '@/middlewares/lang';
+import {routeProtection} from './middlewares/route-protection';
 
 function isPublicAsset(pathname: string) {
   if (pathname.startsWith('/_next/')) return true;

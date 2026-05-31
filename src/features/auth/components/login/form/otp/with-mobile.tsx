@@ -6,20 +6,19 @@ import {Channel} from '../../../../enums';
 import {Input} from '@/components/ui/input';
 import {Button} from '@/components/ui/button';
 import {zodResolver} from '@hookform/resolvers/zod';
+import {CaptchaFieldComponent} from '../../captcha';
+import {useCheckUser} from '@/features/auth/hooks/checkUser';
+import type {LoginWithOtpRequestDTO} from '@/features/auth/types';
 import {loginOtpMobileSchema} from '@/features/auth/validations/loginOtpMobileSchema';
 import type {loginOtpMobileValues} from '@/features/auth/validations/loginOtpMobileSchema';
-
 import {
   Form,
-  FormControl,
-  FormField,
   FormItem,
+  FormField,
   FormLabel,
+  FormControl,
   FormMessage
 } from '@/components/ui/form';
-import {useCheckUser} from '@/features/auth/hooks/checkUser';
-import {CaptchaFieldComponent} from '../../captcha';
-import type {LoginWithOtpRequestDTO} from '@/features/auth/types';
 
 interface IProps {
   changeMode: (value: mode) => void;

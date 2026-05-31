@@ -1,25 +1,24 @@
 'use client';
 
 import {Table} from '@tanstack/react-table';
+import {useDirection} from '@/hooks/useDirection';
 import {usePaginationRange} from './hooks/use-pagination-range';
 import {
+  Select,
+  SelectItem,
+  SelectValue,
+  SelectContent,
+  SelectTrigger
+} from '@/components/ui/select';
+import {
   Pagination,
-  PaginationContent,
   PaginationItem,
   PaginationLink,
   PaginationNext,
+  PaginationContent,
   PaginationPrevious,
   PaginationEllipsis
 } from '@/components/ui/pagination';
-
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue
-} from '@/components/ui/select';
-import {useDirection} from '@/hooks/useDirection';
 
 interface DataGridPaginationProps<TData> {
   table: Table<TData>;

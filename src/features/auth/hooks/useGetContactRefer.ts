@@ -1,5 +1,5 @@
-import {useMutation} from '@tanstack/react-query';
 import {getReferredUser} from '../service';
+import {useMutation} from '@tanstack/react-query';
 
 export const useGetContactRefer = () => {
   return useMutation({

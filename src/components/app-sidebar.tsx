@@ -1,6 +1,8 @@
 'use client';
-import {useEffect} from 'react';
+
 import Link from 'next/link';
+import {useEffect} from 'react';
+import {useMenu} from '@/hooks/use-menu';
 import {useTranslations} from 'next-intl';
 import {MessageSquare} from 'lucide-react';
 import {usePathname} from 'next/navigation';
@@ -9,15 +11,14 @@ import {useSidebar} from '@/components/ui/sidebar';
 import {useMediaQuery} from '@/hooks/use-media-query';
 import {
   Sidebar,
-  SidebarContent,
-  SidebarGroup,
-  SidebarGroupContent,
   SidebarMenu,
-  SidebarMenuButton,
+  SidebarGroup,
+  SidebarHeader,
+  SidebarContent,
   SidebarMenuItem,
-  SidebarHeader
+  SidebarMenuButton,
+  SidebarGroupContent
 } from '@/components/ui/sidebar';
-import {useMenu} from '@/hooks/use-menu';
 
 export function AppSidebar() {
   const translate = useTranslations('sideBar');

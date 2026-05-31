@@ -5,23 +5,22 @@ import {ArrowLeft} from 'lucide-react';
 import {useForm} from 'react-hook-form';
 import {useTranslations} from 'next-intl';
 import {Input} from '@/components/ui/input';
-import {Button} from '@/components/common/button';
 import {Channel} from '@/features/auth/enums';
-import {useEffect, useRef, useState} from 'react';
+import {Button} from '@/components/common/button';
+import {useRef, useState, useEffect} from 'react';
 import {zodResolver} from '@hookform/resolvers/zod';
+import {useCheckUser} from '@/features/auth/hooks/checkUser';
 import {useConfirmUser} from '@/features/auth/hooks/confirmUser';
 import type {LoginWithOtpRequestDTO} from '@/features/auth/types';
+import {convertPasswordToSha1} from '@/features/auth/helpers/convertToSha1';
+import {OtpSchema, type OtpFormValues} from '../../../../validations/otpSchema';
 import {
   Form,
-  FormControl,
-  FormField,
   FormItem,
+  FormField,
+  FormControl,
   FormMessage
 } from '@/components/ui/form';
-
-import {OtpSchema, type OtpFormValues} from '../../../../validations/otpSchema';
-import {convertPasswordToSha1} from '@/features/auth/helpers/convertToSha1';
-import {useCheckUser} from '@/features/auth/hooks/checkUser';
 
 interface IProps {
   checkUserData: LoginWithOtpRequestDTO;

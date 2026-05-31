@@ -1,19 +1,19 @@
 'use client';
 
-import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
+import type {IMode} from '../..';
 import {useTranslations} from 'next-intl';
-import {ArrowLeft, Mail, Smartphone} from 'lucide-react';
+import {useRouter} from 'next/navigation';
 import {MailFormComponent} from './mailForm';
+import {Button} from '@/components/ui/button';
 import {MobileFormComponent} from './mobileForm';
+import {Mail, ArrowLeft, Smartphone} from 'lucide-react';
+import {Tabs, TabsList, TabsContent, TabsTrigger} from '@/components/ui/tabs';
 import {
   Card,
-  CardDescription,
+  CardTitle,
   CardHeader,
-  CardTitle
+  CardDescription
 } from '@/components/ui/card';
-import {Button} from '@/components/ui/button';
-import {useRouter} from 'next/navigation';
-import type {IMode} from '../..';
 
 interface IProps {
   changeMode: (value: IMode) => void;

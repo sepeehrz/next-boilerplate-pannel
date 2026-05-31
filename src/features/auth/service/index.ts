@@ -1,9 +1,9 @@
 import {axiosInstance as $axios} from '@/lib';
 import {
   CaptchaResponseDTO,
-  LoginWithEmailRequestDTO,
+  LoginOtpRequestDTO,
   LoginWithOtpRequestDTO,
-  LoginOtpRequestDTO
+  LoginWithEmailRequestDTO
 } from '../types';
 
 export async function login(data: LoginWithEmailRequestDTO): Promise<object> {

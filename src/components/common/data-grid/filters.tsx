@@ -1,12 +1,12 @@
 'use client';
 
+import {Search} from 'lucide-react';
 import {Table} from '@tanstack/react-table';
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput
 } from '@/components/ui/input-group';
-import {Search} from 'lucide-react';
 
 interface DataGridFiltersProps<TData> {
   table: Table<TData>;
