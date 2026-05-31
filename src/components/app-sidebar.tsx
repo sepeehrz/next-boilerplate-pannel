@@ -26,9 +26,10 @@ export function AppSidebar() {
   const isCollapsed = state === 'collapsed';
   const isTablet = useMediaQuery('(max-width: 1024px)');
   const menu = useMenu();
+
   useEffect(() => {
     setOpen(!isTablet);
-  }, [isTablet]);
+  }, [isTablet, setOpen]);
 
   return (
     <Sidebar className='border-input' collapsible='icon'>

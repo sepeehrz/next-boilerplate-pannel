@@ -1,10 +1,10 @@
 'use client';
 
+import React, {useMemo} from 'react';
 import dayjs from '@/lib/day';
 import DateObject from 'react-date-object';
 import {Input} from '@/components/ui/input';
 import DatePicker from 'react-multi-date-picker';
-import React, {useEffect, useState} from 'react';
 
 import persian from 'react-date-object/calendars/persian';
 import gregorian from 'react-date-object/calendars/gregorian';
@@ -38,50 +38,40 @@ export const DatePickerComponent: React.FC<Props> = ({
   className,
   mode = 'persian'
 }) => {
-  const [internalValue, setInternalValue] = useState<DateObject | null>(null);
-
   const calendar = mode === 'persian' ? persian : gregorian;
   const locale = mode === 'persian' ? persian_fa : gregorian_en;
 
-  useEffect(() => {
-    if (!value) {
-      setInternalValue(null);
-      return;
-    }
+  const pickerValue = useMemo(() => {
+    if (!value) return null;
 
-    const parsed = dayjs(value, format);
-    if (!parsed.isValid()) {
-      setInternalValue(null);
-      return;
-    }
+    const parsed =
+      typeof value === 'number' ? dayjs(value) : dayjs(value, format, true);
 
-    const dateObj = new DateObject({
+    if (!parsed.isValid()) return null;
+
+    return new DateObject({
       date: parsed.toDate(),
       calendar,
       locale
     });
-
-    setInternalValue(dateObj);
   }, [value, format, calendar, locale]);
 
-  function handleChange(date: DateObject | null) {
-    if (!date) {
-      onChange?.('');
-      setInternalValue(null);
+  function handleChange(date: DateObject | DateObject[] | null) {
+    if (!date || Array.isArray(date)) {
+      onChange?.(null);
       return;
     }
 
     const serverValue = dayjs(date.toDate()).format(format);
 
     onChange?.(serverValue);
-    setInternalValue(date);
   }
 
   return (
     <DatePicker
       containerClassName='w-full'
       className='w-full'
-      value={internalValue}
+      value={pickerValue}
       onChange={handleChange}
       calendar={calendar}
       locale={locale}

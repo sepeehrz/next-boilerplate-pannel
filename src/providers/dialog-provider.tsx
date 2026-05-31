@@ -1,16 +1,9 @@
 'use client';
 
-import {
-  createContext,
-  useContext,
-  useState,
-  ReactNode,
-  ComponentType
-} from 'react';
+import {createContext, useState, ReactNode, ComponentType} from 'react';
 import {
   Dialog,
   DialogContent,
-  DialogHeader,
   DialogTitle,
   DialogDescription
 } from '@/components/ui/dialog';
@@ -32,14 +25,21 @@ export const DialogContext = createContext<DialogContextType | null>(null);
 
 export function DialogProvider({children}: {children: ReactNode}) {
   const [open, setOpen] = useState(false);
-  const [Component, setComponent] = useState<ComponentType<any> | null>(null);
-  const [props, setProps] = useState<Record<string, any>>({});
+  const [Component, setComponent] = useState<ComponentType<
+    Record<string, unknown> & DialogComponentProps
+  > | null>(null);
+  const [props, setProps] = useState<Record<string, unknown>>({});
 
   const openDialog = <P extends object>(
     component: ComponentType<P & DialogComponentProps>,
     componentProps?: P
   ) => {
-    setComponent(() => component);
+    setComponent(
+      () =>
+        component as ComponentType<
+          Record<string, unknown> & DialogComponentProps
+        >
+    );
     setProps(componentProps ?? {});
     setOpen(true);
   };

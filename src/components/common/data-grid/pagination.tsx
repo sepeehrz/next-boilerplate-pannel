@@ -37,13 +37,13 @@ export function DataGridPagination<TData>({
   return (
     <div className='flex items-center justify-between px-4 min-h-20 w-full'>
       <Select
-        dir={dir as any}
+        dir={dir as 'ltr' | 'rtl'}
         value={String(pageSize)}
         onValueChange={value => {
           table.setPageIndex(0);
           table.setPageSize(Number(value));
         }}>
-        <SelectTrigger className='w-[100px]'>
+        <SelectTrigger className='w-25'>
           <SelectValue />
         </SelectTrigger>
         <SelectContent

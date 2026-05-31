@@ -1,7 +1,8 @@
 import '@tanstack/react-table';
 
 declare module '@tanstack/react-table' {
-  interface ColumnMeta<TData extends unknown, TValue> {
+  // eslint-disable-next-line unused-imports/no-unused-vars
+  interface ColumnMeta<TData, TValue> {
     width?: string | number;
   }
 }

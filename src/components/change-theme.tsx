@@ -1,34 +1,39 @@
 'use client';
 
+import dynamic from 'next/dynamic';
 import {useTheme} from 'next-themes';
 import {Sun, Moon} from 'lucide-react';
 import {useTranslations} from 'next-intl';
-import {useEffect, useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Tooltip, TooltipContent, TooltipTrigger} from '@/components/ui/tooltip';
 
-export function ChangeTheme() {
-  const {theme, setTheme} = useTheme();
-  const [mounted, setMounted] = useState(false);
+export const ChangeTheme = dynamic(() => Promise.resolve(ChangeThemeInner), {
+  ssr: false
+});
+
+function ChangeThemeInner() {
+  const {resolvedTheme, setTheme} = useTheme();
   const translate = useTranslations('global');
 
-  useEffect(() => setMounted(true), []);
-  if (!mounted) return null;
+  const isLight = resolvedTheme === 'light';
 
   return (
     <Tooltip>
       <TooltipTrigger asChild>
         <Button
           variant='outline'
-          className='border-none bg-inherit '
-          onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
-          {theme === 'light' ? <Moon /> : <Sun />}
+          className='border-none bg-inherit'
+          onClick={() => setTheme(isLight ? 'dark' : 'light')}>
+          {isLight ? <Moon /> : <Sun />}
+
           <span className='hidden sm:block'>
-            {theme === 'light' ? translate('dark') : translate('light')}
+            {isLight ? translate('dark') : translate('light')}
           </span>
+
           <span className='sr-only'>Toggle theme</span>
         </Button>
       </TooltipTrigger>
+
       <TooltipContent>
         <p>{translate('changeTheme')}</p>
       </TooltipContent>

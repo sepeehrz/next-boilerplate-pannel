@@ -1,24 +1,18 @@
 'use client';
-import {useState} from 'react';
 import {useTranslations} from 'next-intl';
 import {LoginWithOtpComponent} from './otp';
-import {WithEmailFormComponent} from './with-email-form';
 
-import Link from 'next/link';
 import {
   Card,
   CardDescription,
   CardHeader,
   CardTitle
 } from '@/components/ui/card';
-import {GoogleLoginComponent} from './googleLogin';
-import {Button} from '@/components/ui/button';
 
 export type ILoginMode = 'password' | 'otp';
 
 export function FormComponent() {
   const translate = useTranslations('loginPage');
-  const [loginMode, setLoginMode] = useState<ILoginMode>('password');
 
   return (
     <>

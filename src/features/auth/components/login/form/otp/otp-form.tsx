@@ -3,15 +3,12 @@
 import {mode} from './index';
 import {ArrowLeft} from 'lucide-react';
 import {useForm} from 'react-hook-form';
-import {useRouter} from 'next/navigation';
 import {useTranslations} from 'next-intl';
 import {Input} from '@/components/ui/input';
 import {Button} from '@/components/common/button';
 import {Channel} from '@/features/auth/enums';
-import {farazPortalUser} from '@/services/index';
 import {useEffect, useRef, useState} from 'react';
 import {zodResolver} from '@hookform/resolvers/zod';
-import {useQueryClient} from '@tanstack/react-query';
 import {useConfirmUser} from '@/features/auth/hooks/confirmUser';
 import type {LoginWithOtpRequestDTO} from '@/features/auth/types';
 import {
@@ -28,17 +25,10 @@ import {useCheckUser} from '@/features/auth/hooks/checkUser';
 
 interface IProps {
   checkUserData: LoginWithOtpRequestDTO;
-  contactValueId: (value: string) => void;
   changeMode: (value: mode) => void;
 }
-export function OtpComponent({
-  checkUserData,
-  changeMode,
-  contactValueId
-}: IProps) {
-  const queryClient = useQueryClient();
+export function OtpComponent({checkUserData, changeMode}: IProps) {
   const translate = useTranslations('otpPage.Form');
-  const router = useRouter();
   const inputRefs = useRef<HTMLInputElement[]>([]);
   const [countDown, setCountDown] = useState(120);
 
@@ -123,20 +113,7 @@ export function OtpComponent({
       channel: checkUserData.channel
     };
 
-    confirmUser(payload, {
-      onSuccess: async () => {
-        const faraz = await queryClient.fetchQuery({
-          queryKey: ['faraz-portal-user'],
-          queryFn: farazPortalUser
-        });
-        if (!faraz.agreementstatus) {
-          contactValueId(faraz._faraz_contact_value);
-          changeMode('complete-profile');
-          return;
-        }
-        router.replace('/');
-      }
-    });
+    confirmUser(payload);
   }
 
   function resendCode() {

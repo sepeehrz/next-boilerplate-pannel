@@ -100,7 +100,7 @@ export function DataGridActions<T>({
         </Tooltip>
       )}
       {Boolean(moreActions?.length) && (
-        <DropdownMenu modal={false} dir={dir as any}>
+        <DropdownMenu modal={false} dir={dir as 'rtl' | 'ltr'}>
           <DropdownMenuTrigger asChild>
             <Button
               variant='outline'

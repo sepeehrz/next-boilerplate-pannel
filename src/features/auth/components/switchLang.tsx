@@ -14,7 +14,7 @@ export function LanguageSwitcher() {
   const {locale, changeLanguage} = useChangeLanguage();
   const {dir} = useDirection();
   return (
-    <DropdownMenu dir={dir as any}>
+    <DropdownMenu dir={dir as 'rtl' | 'ltr'}>
       <DropdownMenuTrigger asChild>
         <Button variant='outline'>
           {locale === 'en' ? 'English' : 'فارسی'}

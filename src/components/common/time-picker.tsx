@@ -1,6 +1,6 @@
 'use client';
 
-import React, {useEffect, useState} from 'react';
+import React, {useMemo} from 'react';
 import dayjs from '@/lib/day';
 import DatePicker from 'react-multi-date-picker';
 import DateObject from 'react-date-object';
@@ -23,46 +23,34 @@ export const TimePickerComponent: React.FC<Props> = ({
   className,
   placeholder
 }) => {
-  const [internalValue, setInternalValue] = useState<DateObject | null>(null);
-
-  useEffect(() => {
-    if (!value) {
-      setInternalValue(null);
-      return;
-    }
+  const pickerValue = useMemo(() => {
+    if (!value) return null;
 
     const parsed = dayjs(value, format, true);
 
-    if (!parsed.isValid()) {
-      setInternalValue(null);
-      return;
-    }
+    if (!parsed.isValid()) return null;
 
-    const dateObj = new DateObject({
+    return new DateObject({
       date: parsed.toDate()
     });
-
-    setInternalValue(dateObj);
   }, [value, format]);
 
-  function handleChange(date: DateObject | null) {
-    if (!date) {
+  function handleChange(date: DateObject | DateObject[] | null) {
+    if (!date || Array.isArray(date)) {
       onChange?.(null);
-      setInternalValue(null);
       return;
     }
 
     const serverValue = dayjs(date.toDate()).format(format);
 
     onChange?.(serverValue);
-    setInternalValue(date);
   }
 
   return (
     <DatePicker
       disableDayPicker
       format={format}
-      value={internalValue}
+      value={pickerValue}
       onChange={handleChange}
       plugins={[<TimePicker key='time' position='bottom' hideSeconds />]}
       render={(value, openCalendar) => (

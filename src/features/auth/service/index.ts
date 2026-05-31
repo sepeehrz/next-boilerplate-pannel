@@ -5,7 +5,6 @@ import {
   LoginWithOtpRequestDTO,
   LoginOtpRequestDTO
 } from '../types';
-import buildContactFetchXml from '../utils/buildContactFetchXml';
 
 export async function login(data: LoginWithEmailRequestDTO): Promise<object> {
   const response = await $axios.post('/auth/Login', data);
@@ -30,11 +29,9 @@ export async function checkUser(data: LoginWithOtpRequestDTO): Promise<object> {
 export async function getReferredUser(
   id: string
 ): Promise<{contactid: string}> {
-  const fetchXml = buildContactFetchXml(id);
-
   const response = await $axios.post(
     '/service-request/Fetch/contacts',
-    fetchXml,
+    {},
     {
       headers: {
         'Content-Type': 'application/xml'

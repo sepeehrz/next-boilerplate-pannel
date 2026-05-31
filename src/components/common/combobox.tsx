@@ -1,22 +1,18 @@
-"use client";
+'use client';
 
-import { Check, ChevronsUpDown } from "lucide-react";
-import { cn } from "@/lib";
-import { Button } from "@/components/ui/button";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
-import { useState, useRef, useEffect } from "react";
-import { Input } from "@/components/ui/input";
+import {Check, ChevronsUpDown} from 'lucide-react';
+import {cn} from '@/lib';
+import {Button} from '@/components/ui/button';
+import {Popover, PopoverContent, PopoverTrigger} from '@/components/ui/popover';
+import {useState, useRef, useEffect} from 'react';
+import {Input} from '@/components/ui/input';
 import {
   Command,
   CommandEmpty,
   CommandGroup,
   CommandItem,
-  CommandList,
-} from "@/components/ui/command";
+  CommandList
+} from '@/components/ui/command';
 
 export interface ComboboxItem {
   value: string;
@@ -32,10 +28,10 @@ export interface DynamicComboboxProps {
 export function ComboboxComponent({
   items = [],
   value,
-  onChange,
+  onChange
 }: DynamicComboboxProps) {
   const [open, setOpen] = useState(false);
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState('');
   const [triggerWidth, setTriggerWidth] = useState<number>(0);
   const triggerRef = useRef<HTMLButtonElement>(null);
 
@@ -43,16 +39,17 @@ export function ComboboxComponent({
     if (triggerRef.current) {
       setTriggerWidth(triggerRef.current.offsetWidth);
     }
+    // eslint-disable-next-line react-hooks/refs
   }, [triggerRef.current?.offsetWidth]);
 
-  const filteredItems = items.filter((item) =>
+  const filteredItems = items.filter(item =>
     item.label.toLowerCase().includes(search.toLowerCase())
   );
 
   const handleSelect = (val: string) => {
     onChange?.(val);
     setOpen(false);
-    setSearch("");
+    setSearch('');
   };
 
   return (
@@ -60,27 +57,23 @@ export function ComboboxComponent({
       <PopoverTrigger asChild>
         <Button
           ref={triggerRef}
-          variant="outline"
-          role="combobox"
+          variant='outline'
+          role='combobox'
           aria-expanded={open}
-          className="w-full justify-between"
-        >
-          {value
-            ? items.find((i) => i.value === value)?.label
-            : "انتخاب کنید..."}
-          <ChevronsUpDown className="opacity-50" />
+          className='w-full justify-between'>
+          {value ? items.find(i => i.value === value)?.label : 'انتخاب کنید...'}
+          <ChevronsUpDown className='opacity-50' />
         </Button>
       </PopoverTrigger>
 
       <PopoverContent
-        className="p-2 border-border"
-        style={{ width: triggerWidth }}
-      >
+        className='p-2 border-border'
+        style={{width: triggerWidth}}>
         <Input
-          placeholder="جستجو..."
+          placeholder='جستجو...'
           value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          className="mb-2"
+          onChange={e => setSearch(e.target.value)}
+          className='mb-2'
         />
         <Command>
           <CommandList>
@@ -88,16 +81,15 @@ export function ComboboxComponent({
               <CommandEmpty>هیچ موردی یافت نشد.</CommandEmpty>
             )}
             <CommandGroup>
-              {filteredItems.map((item) => (
+              {filteredItems.map(item => (
                 <CommandItem
                   key={item.value}
-                  onSelect={() => handleSelect(item.value)}
-                >
+                  onSelect={() => handleSelect(item.value)}>
                   {item.label}
                   <Check
                     className={cn(
-                      "ml-auto",
-                      value === item.value ? "opacity-100" : "opacity-0"
+                      'ml-auto',
+                      value === item.value ? 'opacity-100' : 'opacity-0'
                     )}
                   />
                 </CommandItem>

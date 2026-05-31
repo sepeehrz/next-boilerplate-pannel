@@ -16,7 +16,7 @@ const ThemeProvider = dynamic(
 interface IProps {
   children: ReactNode;
   locale: 'en' | 'fa';
-  messages: Record<string, any>;
+  messages: Record<string, unknown>;
 }
 
 export default function Providers({children, locale, messages}: IProps) {
