@@ -9,14 +9,14 @@ export async function routeProtection(req: NextRequest) {
     return NextResponse.next();
   }
 
-  const publicAuthPages = ['/login', '/forgot-password', '/signup'];
+  const publicAuthPages = ['/auth'];
 
   const isPublicAuthPage = publicAuthPages.some(page =>
     pathname.startsWith(page)
   );
 
   if (!token && !isPublicAuthPage) {
-    return NextResponse.redirect(new URL('/login', req.url));
+    return NextResponse.redirect(new URL('/auth', req.url));
   }
 
   if (token && isPublicAuthPage) {

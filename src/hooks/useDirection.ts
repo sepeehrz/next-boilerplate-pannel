@@ -7,7 +7,7 @@ export function useDirection() {
 
   return {
     locale,
-    dir: isRTL ? 'rtl' : 'ltr',
+    dir: isRTL ? 'rtl' : ('ltr' as 'rtl' | 'ltr'),
     isRTL,
     isPersian
   };
